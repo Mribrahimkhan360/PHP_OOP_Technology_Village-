@@ -4,6 +4,14 @@
         {
             echo "Welcome to the product page!";
         }
+        // Static Methods
+        public function tv()
+        {
+            self :: welcome();
+        }
     }
 
-    product :: welcome();
+    $product = new product();
+    $product -> tv();
+?>
+
