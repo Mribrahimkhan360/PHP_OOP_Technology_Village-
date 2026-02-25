@@ -6,11 +6,12 @@ class man
     public $age;
     public $address;
 
-    function info($fname, $age) {
+    function info($fname, $age , $address) {
         // return "<br />Name: " . $this->name;
         $this->name = $fname;
         $this->age = $age;
-        return "<br />Name: " . $this->name . "<br />Age : " . $this->age;
+        $this->address = $address;
+        return "<br />Name: " . $this->name . "<br />Age : " . $this->age . "<br />Address : " . $this->address;
     }
 }
 
@@ -30,4 +31,4 @@ class man
 // ==================
 
 $man1 = new man();
-echo $man1->info("Ibrahim", 30);
+echo $man1->info("Ibrahim", 30,"Shariatpur Dhaka Bangladesh");
