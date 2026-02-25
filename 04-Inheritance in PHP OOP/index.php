@@ -16,13 +16,21 @@ class man{
 }
 
 class info extends man{
+    public $address;
+    public function __construct($fname, $age, $address)
+    {
+        $this->name = $fname;
+        $this->age = $age;
+        $this->address = $address;
+    }
+
     public function message()
     {
-        return $this->info();
+        return $this->name.' '. $this->age;
     }
 }
 
-$infos = new info("Ibrahim",25);
-echo $infos->info();
-echo "<br />";
+$infos = new info("Ibrahim",25,"Shariatpur Dhaka Bangladesh");
+// echo $infos->info();
+// echo "<br />";
 echo $infos->message();
