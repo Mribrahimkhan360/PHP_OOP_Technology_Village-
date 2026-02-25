@@ -14,17 +14,35 @@
     // $product = new product();
     // $product -> tv();
 
-    class message{
+    // class message{
+    //     public static function welcome()
+    //     {
+    //         echo "Welcome to the message page!";
+    //     }
+    // }
+
+    // class otherClass {
+    //     public function callWelcome()
+    //     {
+    //         message :: welcome();
+    //     }
+    // }
+
+    // $msg = new otherClass();
+    // $msg -> callWelcome();
+
+
+        class message{
         public static function welcome()
         {
             echo "Welcome to the message page!";
         }
     }
 
-    class otherClass {
+    class otherClass extends message {
         public function callWelcome()
         {
-            message :: welcome();
+            parent :: welcome();
         }
     }
 
