@@ -9,7 +9,7 @@ class man{
         $this->age = $age;
     }
 
-    public function info(){
+    protected function info(){
         return "<br />Name: " . $this->name . "<br />Age : " . $this->age;
     }
 
@@ -18,7 +18,7 @@ class man{
 class info extends man{
     public function message()
     {
-        return "This is information of messages";
+        return $this->info();
     }
 }
 
